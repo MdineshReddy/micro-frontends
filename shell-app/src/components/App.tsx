@@ -1,12 +1,12 @@
 import React, { Suspense } from "react";
 
-const RemoteApp = React.lazy(() => import("remoteApp/App"));
+const Button = React.lazy(() => import("remoteApp/Button"));
 
 const App = () => (
   <div>
-    <h1>Shell App</h1>
-    <Suspense fallback={<div>Loading Remote App...</div>}>
-      <RemoteApp />
+    <h1>Host App</h1>
+    <Suspense fallback={<div>Loading Button...</div>}>
+      <Button label="Click Me" onClick={() => alert("Button Clicked!")} />
     </Suspense>
   </div>
 );

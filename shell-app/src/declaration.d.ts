@@ -1,4 +1,9 @@
-declare module "remoteApp/App" {
-    const App: React.ComponentType; // Declare the type of the component.
-    export default App;
+declare module "remoteApp/Button" {
+  interface ButtonProps {
+    label: string;
+    onClick: () => void;
+  }
+
+  const Button: React.ComponentType<ButtonProps>;
+  export default Button;
 }
